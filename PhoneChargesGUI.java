@@ -31,12 +31,10 @@ public class PhoneChargesGUI extends JFrame {
       add(rate, BorderLayout.NORTH);
       add(duration, BorderLayout.CENTER);
       add(buttonPanel, BorderLayout.SOUTH);
-      
-      //set defualt button
-      getRootPane().setDefaultButton(calcButton);
             
-      //set size, position and default selected of JFrame
+      //pack and set defaults
       pack();
+      getRootPane().setDefaultButton(calcButton);
       setLocationRelativeTo(null);
       duration.requestFocus();
       duration.focus();
