@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class RatePanel extends JPanel {
    
-   //constant declaring the rates of phone calls
+   //constants declaring the rates of phone calls
    public final double DAYTIME = .25;
    public final double EVENING = .12;
    public final double OFFPEAK = .05;
@@ -15,7 +15,7 @@ public class RatePanel extends JPanel {
    private ButtonGroup bg;
    
    /**
-   constructor
+      constructor
    */
    
    public RatePanel() {

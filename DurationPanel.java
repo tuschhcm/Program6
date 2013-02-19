@@ -30,7 +30,7 @@ public class DurationPanel extends JPanel {
       @returns number of minutes entered
    */
    
-   public String getMinutes(){
+   public String getText(){
       return(minutesInput.getText());
    }
    

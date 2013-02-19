@@ -71,7 +71,7 @@ public class PhoneChargesGUI extends JFrame {
       public void actionPerformed(ActionEvent e) {
          
          //gather info from panels and send to longDistanceCalc
-         new LongDistanceCalc(rate.getSelectedRate(), duration.getMinutes());
+         new LongDistanceCalc(rate.getSelectedRate(), duration.getText());
          
          //clear text field for next entry
          duration.clearText();

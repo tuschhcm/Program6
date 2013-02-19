@@ -4,8 +4,9 @@ import javax.swing.*;
 public class LongDistanceCalc {
    
    //instance fields
-   private double selectedRate;
+   private double selectedRate, charges;
    private int minutesEntered;
+   private double minimumMinutes = 0;
    
    /**
       constructor
@@ -13,8 +14,17 @@ public class LongDistanceCalc {
    
    public LongDistanceCalc(double r, String m) {
       try{
+         
+         //move data into instance fields
          selectedRate = r;
          minutesEntered = Integer.parseInt(m);
+         
+         //check minutes entry
+         if(minutesEntered < minimumMinutes) {
+            throw new NumberFormatException("negative number");
+         }
+         
+         //once all data is good, call this
          calculateCharges();
       
       } catch(NumberFormatException e) {
@@ -23,20 +33,12 @@ public class LongDistanceCalc {
    }
    
    /**
-      calculateCharges
+      calculateCharges method displays the charges
    */
    
    public void calculateCharges() {
       try{
-         //variables to hold rate, minutes and charges
-         double charges;
-         double minimumMinutes = 0;
             
-         //check minutes entry
-         if(minutesEntered < minimumMinutes) {
-            throw new NumberFormatException("negative number");
-         }
-         
          //calculate charges
          charges = selectedRate * minutesEntered;
          
