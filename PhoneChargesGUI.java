@@ -70,45 +70,11 @@ public class PhoneChargesGUI extends JFrame {
    private class CalcButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          
-         try{
-            //variables to hold rate, minutes and charges
-            double selectedRate, charges;
-            int minutesEntered;
-            double minimumMinutes = 0;
-            
-            //get values from panels
-            selectedRate = rate.getSelectedRate();
-            minutesEntered = duration.getMinutes();
-            
-            //check minutes entry
-            if(minutesEntered < minimumMinutes) {
-               throw new NumberFormatException("negative number");
-            }
-            
-            //calculate charges
-            charges = selectedRate * minutesEntered;
-            
-            //create decimal format object for output
-            DecimalFormat dollar = new DecimalFormat("$0.00");
-            
-            //clear text field for next entry
-            duration.clearText();
-            
-            //Display the Charges
-            JOptionPane.showMessageDialog(null,minutesEntered +
-               " minutes at the rate of " + dollar.format(selectedRate) +
-               " per minute.\n Total Charges are " + dollar.format(charges), 
-               "Phone Charges", JOptionPane.INFORMATION_MESSAGE);
+         //gather info from panels and send to longDistanceCalc
+         new LongDistanceCalc(rate.getSelectedRate(), duration.getMinutes());
          
-         }catch(NumberFormatException error) {
-            
-            //clear text field for next entry
-            duration.clearText();
-            
-            //display error message to user
-            JOptionPane.showMessageDialog(null, "Minutes not valid.", 
-               "Input Error", JOptionPane.ERROR_MESSAGE);
-         }
+         //clear text field for next entry
+         duration.clearText();
       }
    }
    
