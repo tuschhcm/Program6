@@ -28,7 +28,10 @@ public class LongDistanceCalc {
          calculateCharges();
       
       } catch(NumberFormatException e) {
-         invalidEntry();
+         
+         //display error message to user
+         JOptionPane.showMessageDialog(null, "Minutes not valid.", 
+            "Input Error", JOptionPane.ERROR_MESSAGE);
       }
    }
    
@@ -37,29 +40,17 @@ public class LongDistanceCalc {
    */
    
    public void calculateCharges() {
-      try{
             
-         //calculate charges
-         charges = selectedRate * minutesEntered;
-         
-         //create decimal format object for output
-         DecimalFormat dollar = new DecimalFormat("$0.00");
-         
-         //Display the Charges
-         JOptionPane.showMessageDialog(null,minutesEntered +
-            " minutes at the rate of " + dollar.format(selectedRate) +
-            " per minute.\n Total Charges are " + dollar.format(charges), 
-            "Phone Charges", JOptionPane.INFORMATION_MESSAGE);
-         
-      }catch(NumberFormatException e) {
-         invalidEntry();      
-      }
-   }
+      //calculate charges
+      charges = selectedRate * minutesEntered;
       
-   public void invalidEntry() {
-       
-      //display error message to user
-      JOptionPane.showMessageDialog(null, "Minutes not valid.", 
-         "Input Error", JOptionPane.ERROR_MESSAGE);
+      //create decimal format object for output
+      DecimalFormat dollar = new DecimalFormat("$0.00");
+      
+      //Display the Charges
+      JOptionPane.showMessageDialog(null,minutesEntered +
+         " minutes at the rate of " + dollar.format(selectedRate) +
+         " per minute.\n Total Charges are " + dollar.format(charges), 
+         "Phone Charges", JOptionPane.INFORMATION_MESSAGE);
    }
 }
