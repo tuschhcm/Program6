@@ -1,5 +1,5 @@
 !656;s
-A
+J
 SAU0PATH+=%<JGRASP_PATHS>%;
 SCU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
 S+U0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
@@ -10,3 +10,13 @@ s#i0
 s#k0
 s#j0
 s#l0
+!97;g
+%\011LongDistanceCalc.java
+%\011RatePanel.java
+%\011PhoneChargesGUI.java
+%\011DurationPanel.java
+!85;f
+%	LongDistanceCalc.java
+%	RatePanel.java
+%	PhoneChargesGUI.java
+%	DurationPanel.java

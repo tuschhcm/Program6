@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class RatePanel extends JPanel {
    
@@ -20,8 +21,7 @@ public class RatePanel extends JPanel {
    
    public RatePanel() {
       
-      //create grid layout with three rows
-      // and one column
+      //create grid layout with three rows and one column
       setLayout(new GridLayout(3,1));
       
       //create radio buttons

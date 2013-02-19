@@ -36,14 +36,12 @@ public class PhoneChargesGUI extends JFrame {
       pack();
       getRootPane().setDefaultButton(calcButton);
       setLocationRelativeTo(null);
-      duration.requestFocus();
       duration.focus();
       
       //Make window visible
       setVisible(true);
+   }
 
-   } 
-   
    /**
       buildButtonPanel method builds buttonPanel
    */

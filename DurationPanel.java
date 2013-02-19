@@ -39,6 +39,7 @@ public class DurationPanel extends JPanel {
    */
    
    public void focus() {
+      requestFocus();
       minutesInput.requestFocus();
    }
    
