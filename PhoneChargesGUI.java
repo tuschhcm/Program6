@@ -78,6 +78,8 @@ public class PhoneChargesGUI extends JFrame {
       public void actionPerformed(ActionEvent e) {
          
          try{
+            
+            //import data into fields
             double selectedRate = rate.getSelectedRate();
             int minutesEntered = Integer.parseInt(duration.getText());
          
@@ -91,7 +93,6 @@ public class PhoneChargesGUI extends JFrame {
             
             //clear text field for next entry
             duration.clearText();
-
       
             //create decimal format object for output
             DecimalFormat dollar = new DecimalFormat("$0.00");
@@ -106,7 +107,6 @@ public class PhoneChargesGUI extends JFrame {
          
             //clear text field for next entry
             duration.clearText();
-
             
             //display error message to user
             JOptionPane.showMessageDialog(null, "Minutes not valid.", 
