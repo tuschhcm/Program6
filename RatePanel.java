@@ -15,6 +15,14 @@ public class RatePanel extends JPanel {
    private JRadioButton offPeak;
    private ButtonGroup bg;
    
+   //Action to tell GUI when rate has changed
+   private Action rateSelected;
+   
+   //link the actions
+   public void rateSelectedAction(final Action action) {
+      rateSelected = action;
+   }
+   
    /**
       constructor
    */
@@ -28,6 +36,11 @@ public class RatePanel extends JPanel {
       daytime = new JRadioButton("Daytime - 8:00 a.m. to 5:00 p.m.", true);
       evening = new JRadioButton("Evening - 5:00 p.m. to 11:00 p.m.");
       offPeak = new JRadioButton("Off-Peak - 11:00 p.m. to 8:00 a.m.");
+      
+      //add listeners to the radio buttons
+      daytime.addActionListener(new RadioButtonListener());
+      evening.addActionListener(new RadioButtonListener());
+      offPeak.addActionListener(new RadioButtonListener());
       
       //group the radio buttons
       bg = new ButtonGroup();
@@ -64,5 +77,16 @@ public class RatePanel extends JPanel {
       }
       
       return selectedRate;
+   }
+   
+   
+   /**
+      handles the event when user selects a new rate
+   */
+   
+   private class RadioButtonListener implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         rateSelected.onAction();
+      }
    }
 }
