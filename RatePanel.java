@@ -86,7 +86,8 @@ public class RatePanel extends JPanel {
    
    private class RadioButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent e) {
-         rateSelected.onAction();
+         //TODO Implement 
+         //rateSelected.onAction();
       }
    }
 }
