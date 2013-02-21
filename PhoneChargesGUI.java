@@ -30,11 +30,11 @@ public class PhoneChargesGUI extends JFrame {
       buildButtonPanel();
       
       //setup action handlers
-      //rate.rateSelectedAction(new Action() {
-      //   public void onAction(){
-      //      duration.focus();
-      //   }
-      //});
+      rate.rateSelectedAction(new Action() {
+         public void onAction(){
+            duration.focus();
+         }
+      });
       
       //add the components to the content pane
       add(rate, BorderLayout.NORTH);
