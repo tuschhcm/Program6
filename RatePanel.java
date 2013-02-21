@@ -1,3 +1,15 @@
+//*********************************************************************** 
+// Project: Program 6
+// 
+// Author: Craig Tuschhoff 
+// 
+// Completion time: 5 hours total 
+// 
+// Honor Code: I pledge that this program represents my own program code. 
+// I received help from Jesse Morgan (implementing action.java) in designing 
+// and debugging my program. 
+//***********************************************************************
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
